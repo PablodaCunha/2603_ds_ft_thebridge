@@ -271,6 +271,23 @@ class Machine:
         # print(f"Tablero de ataque de la maquina \n {tablero_at}")
         print('*'*50)
         return(tablero_at)
+    
+    def disparar_m1_v2_hard(self, tablero_at, tablero_def, coordenada, enemigo):
+        if tablero_def[coordenada] != 'O':
+            print(f'Tiro original ({coordenada[0]}, {coordenada[1]})')
+            print('La maquina siempre gana, tiro otra vez')
+            print('MUAHAHA')
+            print('BIP BUP')
+            new_coord = self.missile()
+            self.disparar_m1_v2(tablero_at, tablero_def, new_coord, enemigo)
+            if tablero_def[coordenada] == "O":
+                tablero_at[coordenada] = "H"
+                print("M1, bip bup, tocado!")
+                enemigo.recibir_disparo_p1(tablero_def, coordenada)
+                print('*'*50)
+                return(tablero_at)
+
+        
    
 
 
