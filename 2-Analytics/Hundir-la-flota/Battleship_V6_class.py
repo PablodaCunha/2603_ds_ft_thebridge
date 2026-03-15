@@ -132,7 +132,7 @@ class Player:
                 for x in d:
                     d_list.append(int(x))
                 coordenada = tuple(d_list)
-                self.disparar_p1_esp_v2(self, tablero_at, tablero_def, coordenada, enemigo)
+                self.disparar_p1_esp_v2(tablero_at, tablero_def, coordenada, enemigo)
             except Exception as e:
                 print(f"ERROR {e}")
 
