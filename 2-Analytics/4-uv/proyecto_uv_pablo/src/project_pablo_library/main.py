@@ -1,8 +1,3 @@
+import proyect_pablo_library as pal 
 
-
-def main():
-    print("Hello from project-pablo-library!")
-
-
-if __name__ == "__main__":
-    main()
+print(pal.hello())
